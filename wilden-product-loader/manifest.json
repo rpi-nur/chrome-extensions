@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "WILDEN  Brand Data entry ",
+    "description": "Data entry tool for wempro, Data entry on PNI from https://wildenstore.psgdover.com",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "unlimitedStorage"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["https://*.wildenstore.psgdover.com/*", "https://*.pumpsandinstrumentations.com/wms/*"],
+        "css": ["style.css"],
+        "js": ["jquery.min.js", "content.js"]
+      }
+    ]
+}
+ 
