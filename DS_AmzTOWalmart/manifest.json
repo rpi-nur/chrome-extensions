@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "version": "1.1",
+    "name": "AMZ product hunting From Walmart",
+    "description": "Dropshipping product hunting from Amazon to Walmart, and creating a history list for products with price, or stock, and synchronizing Amazon to Walmart.",
+    "permissions": [
+        "activeTab",
+        "storage",
+        "unlimitedStorage"
+      ],
+    "content_scripts": [{
+        "matches": ["https://www.amazon.com/*","https://www.walmart.com/*", "https://sellercentral.amazon.com/*", "http://localhost/*"],
+        "js": ["jquery.min.js", "content.js"],
+        "css": ["style.css"]
+    }],
+    "host_permissions": [
+        "https://www.amazon.com/*",
+        "https://www.walmart.com/*",
+        "https://sellercentral.amazon.com/*",
+        "http://localhost/"
+        
+    ]
+}

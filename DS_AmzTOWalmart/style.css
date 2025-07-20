@@ -1,0 +1,76 @@
+ .pvv-ext-Prime span {
+     background-color: #ddd;
+     border-radius: 8px;
+     padding: 4px 8px;
+ }
+ .was-view {
+    position: relative;
+ }
+ .was-view::after{
+content: '*';
+position: absolute;
+bottom:  0;
+left: 0;
+/* background: green; */
+font-size: 36px;
+padding: 15px;
+color: red;
+ }
+ .sell-btn {
+    position: absolute;
+    right: 0;
+    top:0;
+     }
+ .pvv-ext-Prime span:last-child b {
+     color: #fff !important
+ }
+ 
+ .a-price {
+     color: #ff0000 !important;
+ }
+ 
+ .nur-s {
+     background-color: #ededed;
+     display: block;
+ }
+ 
+ .nur-s span {
+     padding: 15px !important;
+     display: inline-block !important;
+     border-radius: 50%;
+     font-size: 36px;
+     padding: 10px;
+     font-size: 20px !important;
+     color: red;
+ }
+ 
+ .h2 {
+     height: 100px !important;
+     max-height: none !important;
+ }
+ 
+ .pvv-ext-wrap-buttons,
+ .myApp *:empty {
+     display: none;
+ }
+ 
+ .hide,
+ .nuroff {
+     /* display: none !important; */
+     height: 50px !important;
+     border: solid 1px #f00;
+ }
+ 
+ .focus-brand {
+     border: solid 1px #f00;
+ }
+ 
+ .nur-border {
+     border-top: solid 5px red;
+ }
+ 
+ #asinCopy {
+     padding: 15px;
+     cursor: pointer;
+     border: solid 1px;
+ }

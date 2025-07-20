@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": "RPI.ZEHADI 2007 CMT",
+    "description": "Help to Product hunting from amazon to walmart",
+    "permissions": [
+        "activeTab",
+        "storage" 
+        
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+ 
+    "content_scripts": [{
+        "matches": ["https://www.amazon.com/*"],
+        "run_at": "document_idle",
+        "all_frames": true,
+        "js": ["jquery.min.js", "content.js"],
+        "css": ["style.css"]
+    }],
+    "host_permissions": [
+        "https://www.amazon.com/*",
+        "https://www.walmart.com/*"
+ 
+    ]
+}

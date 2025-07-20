@@ -1,0 +1,33 @@
+.have-ext-btn {
+    position: relative;
+    overflow:visible !important;
+}
+.copy-spc {
+    background: green;
+    padding: 10px 25px;
+    position: absolute;
+    top: -100%;
+    right: 50px;
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.paste {
+    background: green;
+    padding: 10px 25px;
+    position: fixed;
+    bottom: 150px;
+    right: 50px;
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.info {
+    bottom: 200px;
+}
+.technical {
+    bottom: 100px;
+}

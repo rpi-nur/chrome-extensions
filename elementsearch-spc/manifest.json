@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "version": "1.0",
+    "name": " Feature section copy from elementsearch.com ",
+    "description": "Data entry tool for wempro",
+    "permissions": [
+      "activeTab",
+      "storage",
+      "unlimitedStorage"
+    ],
+
+    "content_scripts": [
+      {
+        "matches": ["https://*.elementsearch.com/*", "https://*.pumpsandinstrumentations.com/wms/*"],
+        "css": ["style.css"],
+        "js": ["jquery.min.js", "content.js"]
+      }
+    ]
+}
+ 
