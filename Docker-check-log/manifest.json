@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Docker Log Styler",
+  "version": "1.0",
+  "description": "Style <pre> tags for Docker logs",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["activeTab"]
+}

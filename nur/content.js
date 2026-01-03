@@ -93,24 +93,56 @@ function extenRun() {
 } 
 let host = window.location.hostname;
 host = host.split(".");
-host = host[1];
+host = host[0];
  
 $(document).ready(function() {
-if(host==='amazon'){
-    $('.s-desktop-width-max.s-desktop-content').prepend('<span id="asinCopy">Copy text</span>');
-     extenRun();
+console.log('hi nur. how are you !!'); 
+let url="http://127.0.0.1:8000/vendor/update-price?host="+host;
+console.log("url: ", url);
+// console.log("Sending request to:", "http://192.168.1.20:5000/vendor/get-verify-product");
+fetch(url, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json"
+  },
+//   body: JSON.stringify({
+ 
+//     "nodeTextId":"nur-demo",
+//     "nodeTitle":"Nur Demo",
+//     "token": "L9k4noaw0xU4zWdSN5LiMeVpkYrN0pO1cgnXWFbPTS3CRgmZP6SyYIGK4hYggBxT",
+//     "date": "2025-07-17 09:51:24.000000",
+//     "vendor": "amazon"
+ 
+//   })
+})
+.then(response => response.json())
+.then(data => {
+//   console.log("✅ Success:", data);
+let priceCon = data
+let price = $(".regular-price .price").text();
+let cleanPrice = price.replace(/[$,]/g, ''); // "5650.95"
+console.log('price: *** ',cleanPrice, 'data: ',data);
+// alert('price: ',cleanPrice);
+})
+
+ 
+
+ 
+// if(host==='amazon'){
+//     $('.s-desktop-width-max.s-desktop-content').prepend('<span id="asinCopy">Copy text</span>');
+//      extenRun();
    
-    $('#asinCopy').click(function() {
-        navigator.clipboard.writeText(asin);
-    });
+//     $('#asinCopy').click(function() {
+//         navigator.clipboard.writeText(asin);
+//     });
 
 
-    var itemT = $('#productTitle').text();
-    var query = 'https://www.google.com/search?q=' + "site:walmart.com " + itemT.trim();
-    $('#title').prepend('<a href="' + query + '" target="_blank"  class="nur-s"> Go to </a>');
-}else if(host === 'walmart'){
-    // setTimeout(loadData, 3000);
-}
+//     var itemT = $('#productTitle').text();
+//     var query = 'https://www.google.com/search?q=' + "site:walmart.com " + itemT.trim();
+//     $('#title').prepend('<a href="' + query + '" target="_blank"  class="nur-s"> Go to </a>');
+// }else if(host === 'walmart'){
+//     // setTimeout(loadData, 3000);
+// }
 
    
 
