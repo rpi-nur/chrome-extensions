@@ -1,7 +1,1 @@
-function injectedFunction() {
-    document.body.style.backgroundColor = 'orange';
-  }
-  
- 
-
- 
+console.log("File loaded successfully.");

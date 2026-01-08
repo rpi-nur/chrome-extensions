@@ -1,0 +1,52 @@
+ 
+.copy-spc {
+    background: green;
+    padding: 10px 25px;
+    /* position: absolute; */
+    top: -100%;
+    right: 50px;
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.paste {
+    background: green;
+    padding: 10px 25px;
+    /* position: fixed; */
+    /* bottom: 150px;
+    right: 50px; */
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+.submit {
+    background: green;
+    padding: 8px;
+    color: wheat;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.extension-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f1f1f1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: flex;
+}
+.extension-box input {
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}

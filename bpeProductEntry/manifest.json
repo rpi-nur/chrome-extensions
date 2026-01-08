@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Data Entry tools for burtprocess",
+  "description": "Data Entry tools from burtprocess for wempro",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "unlimitedStorage"
+  ],
+
+  "host_permissions": [
+    "https://micropumpparts.com/*",
+    "http://127.0.0.1:8000/*"
+  ],
+
+  "background": {
+    "service_worker": "./worker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.burtprocess.com/*",
+        "https://*.micropumpparts.com/admin/*"
+      ],
+      "css": ["style.css"],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ]
+}
